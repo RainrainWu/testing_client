@@ -14,7 +14,7 @@ flake8:
 	pipenv run flake8
 
 pylint:
-	pipenv run pylint $(PKG)
+	pipenv run pylint $(PKG) --disable=missing-docstring
 
 mypy:
 	pipenv run mypy -p $(PKG) -p tests --ignore-missing-imports
