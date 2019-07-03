@@ -8,9 +8,18 @@ steps:
     commands:
       - make init
       - make lint
+
   - name: test python functions
     image: udcservice/python:3.7
     commands:
       - make init
       - make test
 
+  - name: Publish Docker Image
+    image: plugins/ecr
+    settings:
+    repo: 613868415919.dkr.ecr.us-east-1.amazonaws.com/udc/python-template
+    registry: 613868415919.dkr.ecr.us-east-1.amazonaws.com
+    region: us-east-2
+    tags:
+      - 1.0
