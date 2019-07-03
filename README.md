@@ -16,6 +16,7 @@ Please make sure your Python projects have the following files:
 - Pipfile
 - Pipfile.lock
 - Makefile
+- Terraform/\*
 
 ## Tools
 

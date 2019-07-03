@@ -3,25 +3,22 @@ kind: pipeline
 name: python-template
 
 steps:
-  # - name: lint python files
-  #   image: udcservice/python:3.7
-  #   commands:
-  #     - make init
-  #     - make lint
+  - name: lint python files
+    image: udcservice/python:3.7
+    commands:
+      - make init
+      - make lint
 
-  # - name: test python functions
-  #   image: udcservice/python:3.7
-  #   commands:
-  #     - make init
-  #     - make test
+  - name: test python functions
+    image: udcservice/python:3.7
+    commands:
+      - make init
+      - make test
 
   - name: Create ECR Repo
     image: hashicorp/terraform:latest
     commands:
-      - cd ./terraform
-      - terraform init
-      - terraform plan
-      - terraform apply -auto-approve
+      - make init-ecr
 
   - name: publish Docker image
     image: plugins/ecr

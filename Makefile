@@ -27,6 +27,14 @@ test:
 coverage:
 	pipenv run pytest --cov-report term-missing --cov-report xml --cov=$(PKG) tests
 
+
+init-ecr:
+	cd ./terraform
+	terraform init
+	terraform import aws_ecr_repository
+	terraform plan
+	terraform apply -auto-approve
+
 clean:
 	find . -type f -name '*.py[co]' -delete
 	find . -type d -name '__pycache__' -delete
