@@ -18,7 +18,10 @@ steps:
   - name: create ECR Repo
     image: hashicorp/terraform:latest
     commands:
-      - make init-ecr
+      - cd ./terraform
+      - terraform init
+      - terraform plan
+      - terraform apply -auto-approve
 
   - name: publish Docker image
     image: plugins/ecr
