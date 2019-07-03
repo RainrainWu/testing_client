@@ -1,7 +1,7 @@
 from hypothesis import given
 from hypothesis.strategies import integers
 
-from fzp import fizzbuzz
+from app import fizzbuzz
 
 
 @given(integers())
@@ -14,4 +14,3 @@ def test_fizzbuzz(i):
         assert fizzbuzz(i) == 'fizz'
     else:
         assert fizzbuzz(i) == str(i)
-

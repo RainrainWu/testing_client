@@ -8,7 +8,7 @@ name = "pypi"
 [dev-packages]
 pytest = "*"
 hypothesis = "*"
-"flake8" = "*"
+flake8 = "*"
 pylint = "*"
 pytest-cov = "*"
 pytest-xdist = "*"

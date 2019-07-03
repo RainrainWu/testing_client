@@ -3,4 +3,3 @@ def fizzbuzz(num: int) -> str:
     buzz = "buzz" if num % 5 == 0 else ""
     fizzbuz = fizz + buzz
     return fizzbuz if fizzbuz else str(num)
-
