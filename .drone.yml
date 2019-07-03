@@ -1,0 +1,17 @@
+---
+kind: pipeline
+name: python-template
+
+steps:
+  - name: lint python files
+    image: python:3.7
+    commands:
+      - make init
+      - make lint
+
+  - name: test python functions
+    image: python:3.7
+    commands:
+      - make init
+      - make test
+
