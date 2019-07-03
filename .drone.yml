@@ -15,7 +15,7 @@ steps:
       - make init
       - make test
 
-  - name: Create ECR Repo
+  - name: create ECR Repo
     image: hashicorp/terraform:latest
     commands:
       - make init-ecr
