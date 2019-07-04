@@ -18,6 +18,11 @@ Please make sure your Python projects have the following files:
 - Makefile
 - Terraform/\*
 
+## Coding Style
+
+Please read some basic style guidelie of [PEP 8](https://www.python.org/dev/peps/pep-0008/) before you start to contribute projects.
+
+
 ## Tools
 
 **Dependency Management:**
