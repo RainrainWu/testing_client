@@ -1,6 +1,6 @@
 # python-template
 
-[![Build Status](https://ci.udc-service.io/api/badges/tepco-pg/python-template/status.svg)](https://ci.udc-service.io/tepco-pg/python-template)
+[![Build Status](https://ci.udc-service.io/api/badges/udc/python-template/status.svg)](https://ci.udc-service.io/udc/python-template)
 
 This is implementation in Python for demonstration Python practices.
 
