@@ -37,7 +37,7 @@ Please make sure your Python projects have the following files:
 
 **Code Quality Check:**
 
-- [flake8](https://tox.readthedocs.io/) (Must use)
+- [flake8](http://flake8.pycqa.org/en/latest/) (Must use)
 - [pylint](https://www.pylint.org/) (Must use)
 
 **Automation:**
