@@ -45,6 +45,9 @@ Please read some basic style guidelie of [PEP 8](https://www.python.org/dev/peps
 - [flake8](http://flake8.pycqa.org/en/latest/) (Must use)
 - [pylint](https://www.pylint.org/) (Must use)
 
+**Auto formatters**
+- [black](https://github.com/python/black?source=post_page---------------------------)
+
 **Automation:**
 
 - [Drone CI](https://drone.io/) (Must use)
