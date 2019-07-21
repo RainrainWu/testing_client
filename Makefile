@@ -19,6 +19,11 @@ pylint:
 mypy:
 	pipenv run mypy -p $(PKG) -p tests --ignore-missing-imports
 
+
+black:
+	pipenv run black app --skip-string-normalization
+
+
 lint: flake8 pylint mypy
 
 test:

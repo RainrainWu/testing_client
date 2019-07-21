@@ -14,7 +14,7 @@ pytest-cov = "*"
 pytest-xdist = "*"
 twine = "*"
 mypy = "*"
+black = "*"
 
 [requires]
 python_version = "3.7"
-
