@@ -4,13 +4,13 @@ name: python-template
 
 steps:
   - name: lint python files
-    image: udcservice/python:3.7
+    image: udcservice/python:latest
     commands:
       - make init
       - make lint
 
   - name: test python functions
-    image: udcservice/python:3.7
+    image: udcservice/python:latest
     commands:
       - make init
       - make test
@@ -36,6 +36,6 @@ steps:
       - master
 
   - name: publish version.json to S3
-    image: udcservice/python:3.7
+    image: udcservice/python:latest
     commands:
       - aws s3 cp version.json s3://udc-component-version/python-template.json
