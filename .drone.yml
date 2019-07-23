@@ -34,3 +34,8 @@ steps:
     when:
       branch:
       - master
+
+  - name: publish version.json to S3
+    image: udcservice/python:3.7
+    commands:
+      - aws s3 cp version.json s3://udc-component-version/python-template.json
