@@ -11,7 +11,7 @@ provider "aws" {
   profile = "default"
   region  = "us-east-2"
 }
-resource "aws_ecr_repository" "python-template/ecr-repo" {
+resource "aws_ecr_repository" "python-template_ecr-repo" {
   name = "udc/python-template"
 }
 
