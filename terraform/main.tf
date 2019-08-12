@@ -3,7 +3,7 @@ terraform {
     encrypt = true
     bucket  = "udc-dev-terraform-cicd"
     region  = "us-east-2"
-    key     = "terraform.udc-dev-cicd.tfstate"
+    key     = "terraform.udc-dev-cicd.python-template.tfstate"
   }
 }
 
