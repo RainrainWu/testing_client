@@ -26,7 +26,7 @@ steps:
   - name: publish Docker image
     image: plugins/ecr
     environment:
-      - PLUGIN_DEBUG=true
+      PLUGIN_DEBUG: true
     settings:
       repo: udc/python-template
       registry: 613868415919.dkr.ecr.us-east-1.amazonaws.com
