@@ -29,7 +29,7 @@ steps:
       PLUGIN_DEBUG: true
     settings:
       repo: udc/python-template
-      registry: 613868415919.dkr.ecr.us-east-1.amazonaws.com
+      registry: 613868415919.dkr.ecr.us-east-2.amazonaws.com
       region: us-east-2
       tags:
         - 1.0
