@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+loguru = "*"
 
 [dev-packages]
 pytest = "*"
@@ -12,9 +13,9 @@ flake8 = "*"
 pylint = "*"
 pytest-cov = "*"
 pytest-xdist = "*"
-twine = "*"
-mypy = "*"
-black = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
