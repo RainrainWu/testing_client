@@ -8,17 +8,21 @@ from tester.config import (
 )
 
 
-parser = argp.ArgumentParser(description="Testing client.")
-parser.add_argument('-t', '--type', type=str, help='testing type.')
-parser.add_argument('-l', '--level', type=str, help='testing level.')
+def main(args):
 
-if len(sys.argv[1:]) == 0:
-    parser.print_help()
-    parser.exit()
+    test_type = args.type if args.type else TEST_TYPES[0]
+    test_level = args.level if args.level else TEST_LEVELS[0]
+    run_test(test_type, test_level)
 
-args = parser.parse_args()
 
-test_type = args.type if args.type else TEST_TYPES[0]
-test_level = args.level if args.level else TEST_LEVELS[0]
+if __name__ == '__main__':
 
-run_test(test_type, test_level)
+    parser = argp.ArgumentParser(description="Testing client.")
+    parser.add_argument('-t', '--type', type=str, help='testing type.')
+    parser.add_argument('-l', '--level', type=str, help='testing level.')
+
+    if len(sys.argv[1:]) == 0:
+        parser.print_help()
+        parser.exit()
+
+    main(parser.parse_args())

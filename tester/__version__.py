@@ -1,3 +1,3 @@
-__title__ = 'fzp'
-__description__ = 'fizzbuzz python'
-__version__ = '0.0.1'
+__title__ = 'testing client'
+__description__ = 'testing scripts integration.'
+__version__ = '0.0.2'
