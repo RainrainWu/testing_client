@@ -1,20 +1,18 @@
-from tester.report import Reporter
+from tester.config import TEST_LEVELS
+from tester.utils.report import Reporter
 
-case_regr_less = []
-case_regr_common = []
-case_regr_verbose = []
+cases_regr = {}
+for test_level in TEST_LEVELS:
+    cases_regr[test_level] = []
 
 
-def regr_level(test_level: str):
+def regr_level(level: str):
     def wrapper(func):
 
-        global case_regr_less, case_regr_common, case_regr_verbose
-        if test_level == 'less':
-            case_regr_less += [func]
-        if test_level == 'common':
-            case_regr_common += [func]
-        if test_level == 'verbose':
-            case_regr_verbose += [func]
+        global cases_regr
+        for test_level in TEST_LEVELS:
+            if level == test_level:
+                cases_regr[test_level] += [func]
 
         return func
     return wrapper

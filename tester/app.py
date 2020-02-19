@@ -1,7 +1,7 @@
 import sys
 import argparse as argp
 
-from tester.runner import run_test
+from tester.utils.runner import run_test
 from tester.config import (
     TEST_TYPES,
     TEST_LEVELS

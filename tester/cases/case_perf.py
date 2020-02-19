@@ -1,21 +1,19 @@
-from tester.report import Reporter
+from tester.config import TEST_LEVELS
+from tester.utils.report import Reporter
 
-case_perf_less = []
-case_perf_common = []
-case_perf_verbose = []
+cases_perf = {}
+for test_level in TEST_LEVELS:
+    cases_perf[test_level] = []
 
 
-def perf_level(test_level: str):
+def perf_level(level: str):
     def wrapper(func):
 
-        global case_perf_less, case_perf_common, case_perf_verbose
-        if test_level == 'less':
-            case_perf_less += [func]
-        if test_level == 'common':
-            case_perf_common += [func]
-        if test_level == 'verbose':
-            case_perf_verbose += [func]
-    
+        global cases_perf
+        for test_level in TEST_LEVELS:
+            if level == test_level:
+                cases_perf[test_level] += [func]
+
         return func
     return wrapper
 
