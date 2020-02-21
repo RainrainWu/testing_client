@@ -14,10 +14,12 @@ def main(args):
     group = args.group if args.group else TEST_GROUPS[0]
     if group not in TEST_GROUPS:
         Reporter.error('Undefined testing group')
+        return
 
     level = args.level if args.level else TEST_LEVELS[0]
     if level not in TEST_LEVELS:
         Reporter.error('Undefined testing level')
+        return
 
     run_test(group.lower(), level.lower())
 

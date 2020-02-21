@@ -16,28 +16,13 @@ flake8:
 pylint:
 	pipenv run pylint $(PKG) --disable=missing-docstring
 
-mypy:
-	pipenv run mypy -p $(PKG) -p tests --ignore-missing-imports
-
-
-black:
-	pipenv run black app --skip-string-normalization
-
-
 lint: flake8 pylint mypy
 
 test:
-	pipenv run pytest
+	pipenv run pytest --pep8 --disable-warnings
 
 coverage:
 	pipenv run pytest --cov-report term-missing --cov-report xml --cov=$(PKG) tests
-
-
-init-ecr:
-	cd ./terraform && \
-		terraform init && \
-		terraform plan && \
-		terraform apply -auto-approve
 
 clean:
 	find . -type f -name '*.py[co]' -delete

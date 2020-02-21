@@ -10,6 +10,7 @@ from tester.config import (
     TEST_LEVELS
 )
 
+# run all subpackage for testing.
 for importer, modname, ispkg in pkgutil.iter_modules(case.__path__):
     if modname != 'case_manager':
         runpy.run_module(mod_name='tester.case.' + modname)
@@ -20,18 +21,18 @@ def check_level(level, threshold):
 
 
 def run_test(group: str, level: str):
-
+    """Run tests depends on input group and level."""
     for test_group in TEST_GROUPS:
         if group == test_group:
             Reporter.header1(group + ' test')
-            
+
             for test_level in TEST_LEVELS:
                 if check_level(level, test_level):
                     run_test_list(cases[test_group][test_level])
 
 
 def run_test_list(test_list: list):
-
+    """Run a series of tests within test storage area."""
     for test in test_list:
         try:
             test()

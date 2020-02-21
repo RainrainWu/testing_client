@@ -1,2 +1,2 @@
-TEST_GROUPS = ['func', 'regr', 'perf']
+TEST_GROUPS = {'func', 'regr'}
 TEST_LEVELS = ['less', 'common', 'verbose']

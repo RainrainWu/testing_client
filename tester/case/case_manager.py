@@ -5,6 +5,7 @@ from tester.config import (
 )
 
 
+# Init case storage area
 cases = {}
 for test_group in TEST_GROUPS:
     cases[test_group] = {}
@@ -13,6 +14,7 @@ for test_group in TEST_GROUPS:
 
 
 def mount(group: str, level: str):
+    """Mount test case into test case storage area"""
     def wrapper(func):
 
         global cases

@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 loguru = "*"
+pytest-pep8 = "*"
+pytest-warnings = "*"
 
 [dev-packages]
 pytest = "*"
